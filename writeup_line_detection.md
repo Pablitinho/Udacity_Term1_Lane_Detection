@@ -76,5 +76,4 @@ A possible improvement would be instead of use the Canny method, it study the tr
 
 Also in the paper, make use of Inverse Perspective Mapping (IPM) in order to avoid the ROI in the image, this is more portable if we know the intrinsic and extrinsic parameters of the camera in order to generate the IPM. In this case, it is indifferent from camera position, rotation and also image resolution size.
 
-Another potential improvement could be to ...
 
