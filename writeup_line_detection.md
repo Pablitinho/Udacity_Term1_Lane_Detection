@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./write_up_files/lines_image1.png "Example 1"
+[image1]: ./write_up_files/lines_image1.png  "Example 1"
 [image2]: ./write_up_files/lines_image2.png "Example 2"
 [image3]: ./write_up_files/lines_image3.png "Example 3"
 [image4]: ./write_up_files/lines_image4.png "Example 4"
@@ -24,17 +24,24 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Describe your pipeline.
 
-My pipeline consisted of X main steps. First, I converted the images to grayscale, then I ....
+Here you can find some examples of the output of the algorithm:
+
+<img src="./write_up_files/lines_image1.png" width="380" alt="Example 1" />
+<img src="./write_up_files/lines_image2.png" width="380" alt="Example 2" />
+<img src="./write_up_files/lines_image3.png" width="380" alt="Example 3" />
+<img src="./write_up_files/lines_image5.png" width="380" alt="Example 4" />
+
+The main function is "detect_lines_on_road" that contain the pipeline to detect the lines on the road.
+
+The pipeline of "detect_lines_on_road" consisted of X main steps:
+
+ 1. Convert the image to grayscale
+ 2. Apply Blur filtering to remove high frequencies
+ 3. Process the Canny Filter   
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
-
-
 ### 2. Identify potential shortcomings with your current pipeline
 
 
@@ -48,3 +55,4 @@ Another shortcoming could be ...
 A possible improvement would be to ...
 
 Another potential improvement could be to ...
+
