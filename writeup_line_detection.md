@@ -30,14 +30,14 @@ Here you can find some examples of the output of the algorithm:
 
 <table cellspacing="0" cellpadding="0" border="0" width="600">
     <tr>
-        <td width="580"><img src="./write_up_files/lines_image1.png" width="380" alt="Example 1" /></td>
-        <td width="20"><img src="./write_up_files/lines_image2.PNG" width="380" alt="Example 4" /></td>
+        <td width="580"><img src="./write_up_files/lines_image1.png" width="380"  /></td>
+        <td width="20"><img src="./write_up_files/lines_image2.PNG" width="380"  /></td>
     </tr>
 </table>
 <table cellspacing="0" cellpadding="0" border="0" width="600">
     <tr>
-        <td width="580"><img src="./write_up_files/lines_image4.png" width="380" alt="Example 1" /></td>
-        <td width="20"><img src="./write_up_files/lines_image5.PNG" width="380" alt="Example 4" /></td>
+        <td width="580"><img src="./write_up_files/lines_image4.png" width="380"  /></td>
+        <td width="20"><img src="./write_up_files/lines_image5.PNG" width="380"  /></td>
     </tr>
 </table>
 The main function is **"detect_lines_on_road"** that contain the pipeline to detect the lines on the road.
@@ -56,6 +56,9 @@ The implementation of the function **"hough_lines_road"** follow the steps descr
  1. Detect the line by mean of hough transformation 
  2. Detect and identify the left and right lines by mean of the function **"detect_left_right_line"**
  3. Draw the left and right lines and draw in the image.
+ 
+ The implementation of the function **"detect_left_right_line"** follow the steps described below:
+ 
  
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
