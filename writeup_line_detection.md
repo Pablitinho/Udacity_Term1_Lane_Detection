@@ -12,16 +12,6 @@ The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-
-[//]: # (Image References)
-
-[image1]: ./write_up_files/lines_image1.png  "Example 1"
-[image2]: ./write_up_files/lines_image2.png "Example 2"
-[image3]: ./write_up_files/lines_image3.png "Example 3"
-[image4]: ./write_up_files/lines_image4.png "Example 4"
-[image5]: ./write_up_files/lines_image5.png "Example 5"
----
-
 ### Reflection
 
 ### 1. Describe your pipeline.
