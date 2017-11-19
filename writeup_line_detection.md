@@ -26,8 +26,8 @@ Here you can find some examples of the output of the algorithm:
 </table>
 <table cellspacing="0" cellpadding="0" border="0" width="600">
     <tr>
-        <td width="380"><img src="./write_up_files/lines_image4.png" width="380"  /></td>
-        <td width="380"><img src="./write_up_files/lines_image5.png" width="380"  /></td>
+        <td width="380"><img src="./write_up_files/lines_image4.PNG" width="380"  /></td>
+        <td width="380"><img src="./write_up_files/lines_image5.PNG" width="380"  /></td>
     </tr>
 </table>
 The main function is **"detect_lines_on_road"** that contain the pipeline to detect the lines on the road.
