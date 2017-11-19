@@ -1,8 +1,6 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
+## Writeup File
 
 ---
 
@@ -49,20 +47,35 @@ The implementation of the function **"hough_lines_road"** follow the steps descr
  
  The implementation of the function **"detect_left_right_line"** follow the steps described below:
  
+ 1. Estimate the center of the image in X
+ 2. Collect in two list (left lines and right lines) by the X criteria example: if center_x>line.x add to the right_line_list and the equation of the line by mean of the two points that define the line.
+ 3. Once that we have to list with the left and right lines we get the one with high score by mean of the function **"get_scores"**
+ 4. Get the left and right lines with higher score
+ 5. Return left and right line
  
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
+ The implementation of the function **"get_scores"** follow the steps described below:
+ 
+ 1. Set the score to 0 the lines that have an angle below 200º 
+ 2. By mean the line equation each point that relay in the line we check 5 pixels to the left and to the right and increase the score 
+    if the canny image is marked with a value bigger than 0.
+3. Return the scores.
+  
 ### 2. Identify potential shortcomings with your current pipeline
 
+Sometimes the method fail, for example in the Challenge video. The problem is that find bigger lines that don't belong to the road lane. Here one example: 
 
-One potential shortcoming would be what would happen when ... 
+<img src="./write_up_files/line_error_1.PNG" width="380"  />
 
-Another shortcoming could be ...
-
+Other point is that the line is not stable, i.e., it is doing the snake effect. Also I have seen that in the challenge video sometimes the right line disappear, but this problem can be because the ROI due the other videos have different resolution.
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+A possible improvement would be instead of use the Canny method, it study the transition of the derivative in X and mark block when there is a zero cross in the  derivative domain. Here an example extracted from the paper **"Adaptative Road Lanes Detection and Classification"** :
+
+<img src="./write_up_files/derivate_lines_road.PNG" width="380"  />
+
+Also in the paper, make use of Inverse Perspective Mapping (IPM) in order to avoid the ROI in the image, this is more portable if we
+know the intrinsic and extrinsic parameters of the camera in order to generate the IPM,
 
 Another potential improvement could be to ...
 
