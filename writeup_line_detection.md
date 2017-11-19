@@ -29,9 +29,9 @@ The goals / steps of this project are the following:
 Here you can find some examples of the output of the algorithm:
 
 <img src="./write_up_files/lines_image1.png" width="380" alt="Example 1" />
-<img src="./write_up_files/lines_image2.png" width="380" alt="Example 2" />
-<img src="./write_up_files/lines_image3.png" width="380" alt="Example 3" />
-<img src="./write_up_files/lines_image5.png" width="380" alt="Example 4" />
+<img src="./write_up_files/lines_image2.PNG" width="380" alt="Example 2" />
+<img src="./write_up_files/lines_image3.PNG" width="380" alt="Example 3" />
+<img src="./write_up_files/lines_image5.PNG" width="380" alt="Example 4" />
 
 The main function is "detect_lines_on_road" that contain the pipeline to detect the lines on the road.
 
