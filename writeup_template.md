@@ -15,8 +15,11 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
+[image1]: ./write_up_files/lines_image1.png "Example 1"
+[image2]: ./write_up_files/lines_image2.png "Example 2"
+[image3]: ./write_up_files/lines_image3.png "Example 3"
+[image4]: ./write_up_files/lines_image4.png "Example 4"
+[image5]: ./write_up_files/lines_image5.png "Example 5"
 ---
 
 ### Reflection
