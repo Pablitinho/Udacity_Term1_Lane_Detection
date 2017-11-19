@@ -94,7 +94,7 @@ def angle_line(line):
         theta += 360
 
     return theta
-
+# --------------------------------------------------------------------------------
 def get_scores(image, lines, num_lines,lines_equations,min_y):
 
     score = np.zeros(len(lines))
