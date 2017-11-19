@@ -52,7 +52,7 @@ def region_of_interest(img, vertices):
     masked_image = cv2.bitwise_and(img, mask)
     return masked_image
 # --------------------------------------------------------------------------------
-def draw_lines(img, lines, color=[255, 0, 0], thickness=2):
+def draw_lines(img, lines, color=[255, 0, 0], thickness=12):
     """
     NOTE: this is the function you might want to use as a starting point once you want to
     average/extrapolate the line segments you detect to map out the full
@@ -83,6 +83,18 @@ def hough_lines(img, rho, theta, threshold, min_line_len, max_line_gap):
                             maxLineGap=max_line_gap)
     return lines
 # --------------------------------------------------------------------------------
+def angle_line(line):
+
+    theta = math.atan2(line[0, 1]-line[0, 3], line[0, 0]-line[0, 2])
+
+    #theta += math.pi/2.0
+    theta = math.degrees(theta)
+    theta += 90
+    if theta < 0:
+        theta += 360
+
+    return theta
+
 def get_scores(image, lines, num_lines,lines_equations,min_y):
 
     score = np.zeros(len(lines))
@@ -91,7 +103,9 @@ def get_scores(image, lines, num_lines,lines_equations,min_y):
     for i in range(num_lines):
         equation = lines_equations[i]
         score[i] = 0
-        if equation[0] != 0 and math.isinf(equation[0]) == False and math.isinf(equation[1]) == False:
+        theta = angle_line(lines[i])
+
+        if equation[0] != 0 and math.isinf(equation[0]) == False and math.isinf(equation[1]) == False and theta > 200:
             for y in range(min_y, image.shape[1], 1):
 
                 if equation[0] == 0:
