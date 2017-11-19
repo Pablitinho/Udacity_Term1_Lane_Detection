@@ -328,6 +328,6 @@ for i in range(len(video_list)):
 
     HTML("""
     <video width="960" height="540" controls>
-    <source src="{0}">
+      <source src="{0}">
     </video>
     """.format(white_output))
